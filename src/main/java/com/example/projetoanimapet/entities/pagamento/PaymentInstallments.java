@@ -4,10 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import java.io.Serializable;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class PaymentInstallments {
+@Entity
+public class PaymentInstallments extends Payment implements Serializable {
 
     private Integer numberInstallments;
 }
